@@ -1,10 +1,10 @@
 function getComputerChoice() {
-    switch(Math.random()) {
-        case 1:
+    switch(Math.floor(3 * Math.random())) {
+        case 0:
             return "rock";
-        case 2:
+        case 1:
             return "paper";
-        case 3: 
+        case 2: 
             return "scissors";
         default:
             console.error("ERROR: Computer choice out of bounds");
