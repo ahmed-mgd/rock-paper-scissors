@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #44574E;
+    padding: 1rem;
+}
+
+.wins h3 {
+    color: yellow;
+}
+
+.losses h3 {
+    color: red;
+}
+
+.main {
+    background-color: #232C27;
+}
+
+.side-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+.side-wrapper button {
+    background-color: #559E7B;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side h2 {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.play-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+img {
+    max-width:4;
+    height:auto;
+}

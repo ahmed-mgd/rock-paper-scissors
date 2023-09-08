@@ -4,32 +4,7 @@
  * @returns random choice of rock, paper, or scissors
  */
 function getComputerChoice() {
-    switch(Math.floor(3 * Math.random())) {
-        case 0:
-            return "ROCK";
-        case 1:
-            return "PAPER";
-        case 2: 
-            return "SCISSORS";
-        default:
-            console.error("ERROR: Computer choice out of bounds");
-    }
-
-}
-
-/**
- * Converts choice of rock, paper, or scissors to its integer value.
- * 
- * @returns the integer "equivalent" of the R,P,S choice
- */
-function choiceToInt(selection) {
-    if (selection === "ROCK") {
-        return 0;
-    } else if (selection === "PAPER") {
-        return 1;
-    } else {
-        return 2;
-    }
+    return Math.floor(3 * Math.random());
 }
 
 /**
@@ -44,10 +19,7 @@ function choiceToInt(selection) {
  * @returns the result of the round with each party's choice
  */
 function playRound(playerSelection, computerSelection) {
-    const playerSelectionUpper = playerSelection.toUpperCase();
-    const playerInt = choiceToInt(playerSelectionUpper);
-    const computerInt = choiceToInt(computerSelection);
-    const difference = playerInt - computerInt;
+    const difference = playerSelection - computerSelection;
 
     if (difference === 0) {
         return `Tie! Both parties chose ${playerSelectionUpper}.`;
@@ -66,7 +38,7 @@ function game() {
     let numWins = 0;
     let numLosses = 0;
 
-    for (let i = 0; i < numGames; i++) {
+    while (numWins < 5 || numLosses < 5) {
         // Prompt user for choice
         const playerSelection = prompt("Enter your choice (rock, paper, or scissors): ");
 
