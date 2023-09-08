@@ -19,32 +19,6 @@
     padding: 40px 0;
 }
 
-.scoreboard {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    width: 500px;
-    height: 100px;
-    background-color: #44574E;
-    padding: 1rem;
-    margin: 0 auto;
-    border: 20px;
-    border-color: black;
-}
-
-.scoreboard .sb-item {
-    margin-left: 2rem;
-}
-
-.wins h3 {
-    color: yellow;
-}
-
-.losses h3 {
-    color: red;
-}
-
 .content-wrapper {
     display: flex;
     flex-direction: row;
@@ -104,9 +78,41 @@
     margin: 0 auto;
 }
 
+.scoreboard {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    width: 500px;
+    height: 100px;
+    background-color: #44574E;
+    padding: 1rem;
+    margin: 0 auto;
+    border: 20px;
+    border-color: black;
+}
+
+.scoreboard .sb-item {
+    margin-left: 2rem;
+}
+
+.wins h3 {
+    color: yellow;
+}
+
+.losses h3 {
+    color: red;
+}
+
+br {
+    color: white;
+}
+
 .round-info {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
 }
 
 .current-choice {

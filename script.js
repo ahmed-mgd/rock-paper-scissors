@@ -35,12 +35,22 @@ function playRound(playerSelection, computerSelection) {
  * Runs an instance of a rock, paper, scissors game.
  */
 function game() {
-    // Target player buttons
+
+    // Initialize variables
+    let numGames = 5;
+    let numWins = 0;
+    let numLosses = 0;
+
+    const winText = document.getElementById("num-wins");
+    const lossesText = document.getElementById("num-losses");
+    const tiesText = document.getElementById("num-ties");
+
+    // Register player buttons as listeners
     const playerButtons = document.querySelectorAll(".p-button");
-    playerButtons.forEach(function(currentValue, currentIndex) {
-        currentValue.addEventListener("click", () => {
-            currentValue.setAttribute("style", "display: none;")
-            result = playRound(currentIndex, getComputerChoice());
+    playerButtons.forEach(function(choice, index) {
+        choice.addEventListener("click", () => {
+            choice.setAttribute("style", "opacity: 0;");
+            const result = playRound(index, getComputerChoice());
     
             // Output results
             const resultText = document.getElementById("result-text");
@@ -49,26 +59,22 @@ function game() {
             // Update score
             if (result.indexOf("win") > 0) {
                 numWins++;
+                winText.innerHTML = numWins;
             } else if (result.indexOf("lose") > 0) {
                 numLosses++;
+                lossesText.innerHTML = numLosses;
+            } else {
+                tiesText.innerHTML = parseInt(tiesText.innerHTML) + 1;
             }
+
+            choice.setAttribute("style", "opacity: 1;");
         })
     });
-    
-    // const rock = document.querySelector("#player-r");
-    // const paper = document.querySelector("#player-p");
-    // const scissors = document.querySelector("#player-s");
 
-    let result;
+    // while (numWins < 5 || numLosses < 5) {
+    //     // TODO: Prompt user for choice
 
-    let numGames = 5;
-    let numWins = 0;
-    let numLosses = 0;
-
-    while (numWins < 5 || numLosses < 5) {
-        // TODO: Prompt user for choice
-
-    }
+    // }
     
     // Final results
     const numTies = numGames - (numWins + numLosses);
