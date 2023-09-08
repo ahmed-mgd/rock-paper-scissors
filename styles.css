@@ -15,21 +15,25 @@
 }
 
 .main {
-
+    background-color: #232C27;
+    padding: 40px 0;
 }
 
 .scoreboard {
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: space-around;
     width: 500px;
     height: 100px;
-    background-color: #559E7B;
+    background-color: #44574E;
     padding: 1rem;
     margin: 0 auto;
+    border: 20px;
+    border-color: black;
 }
 
-.scoreboard div {
+.scoreboard .sb-item {
     margin-left: 2rem;
 }
 
@@ -39,10 +43,6 @@
 
 .losses h3 {
     color: red;
-}
-
-.main {
-    background-color: #232C27;
 }
 
 .content-wrapper {
@@ -86,7 +86,16 @@
     width: 200px;
 }
 
-.play-buttons svg {
+.p-button:hover {
+    transform:translateY(-5px);
+    transition-duration: 0.5s;
+}
+
+.c-button {
+    filter: grayscale(0.6);
+}
+
+.play-buttons img {
     margin: 0 auto 1rem auto;
 }
 
@@ -95,7 +104,28 @@
     margin: 0 auto;
 }
 
-img {
-    max-width:4;
-    height:auto;
+.round-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.current-choice {
+    border-width: medium;
+    border-color: black;
+    width: 200px;
+    width: 500px;
+}
+
+.result-text {
+    min-width: 5rem;
+    min-height: 2rem;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #000000;
+}
+
+.footer .git-name {
+    display: none;
 }
