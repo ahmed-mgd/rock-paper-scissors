@@ -6,12 +6,31 @@
     color: white;
 }
 
-.scoreboard {
+.nav {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
     text-align: center;
     background-color: #44574E;
     padding: 1rem;
+}
+
+.main {
+
+}
+
+.scoreboard {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    background-color: #559E7B;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.scoreboard div {
+    margin-left: 2rem;
 }
 
 .wins h3 {
@@ -26,15 +45,15 @@
     background-color: #232C27;
 }
 
-.side-wrapper {
+.content-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 2rem 0;
 }
 
-.side-wrapper button {
-    background-color: #559E7B;
+.content-wrapper button {
+    background-color: rgb(58, 75, 58);
 }
 
 .side {
@@ -44,6 +63,7 @@
 }
 
 .side h2 {
+    font-size: 50px;
     font-style: italic;
     font-weight: bold;
     text-align: center;
@@ -55,6 +75,24 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.play-buttons button {
+    padding: 3rem 1rem;
+    border-radius: 8px;
+    font-size: 30px;
+    margin: 6px;
+    width: 200px;
+}
+
+.play-buttons svg {
+    margin: 0 auto 1rem auto;
+}
+
+.play-buttons .button-label {
+    text-align: center;
+    margin: 0 auto;
 }
 
 img {
